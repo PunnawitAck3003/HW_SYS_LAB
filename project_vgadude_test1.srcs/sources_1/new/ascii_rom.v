@@ -2195,6 +2195,23 @@ module ascii_rom(
 			12'h7ed: data = 8'b00000000;	//
 			12'h7ee: data = 8'b00000000;	//
 			12'h7ef: data = 8'b00000000;	//
+			// code xa1 (~)
+			12'hA10: data = 8'b00000000;	//
+			12'hA11: data = 8'b00000000;	//
+			12'hA12: data = 8'b00000000;	//
+			12'hA13: data = 8'b00000000;	//
+			12'hA14: data = 8'b00000000;	//
+			12'hA15: data = 8'b00000000;	//
+			12'hA16: data = 8'b01100000;	//
+			12'hA17: data = 8'b10011100;	//
+			12'hA18: data = 8'b01100000;	//
+			12'hA19: data = 8'b01000000;	//
+			12'hA1a: data = 8'b01000000;	//
+			12'hA1b: data = 8'b01000000;	//
+			12'hA1c: data = 8'b01000000;	//
+			12'hA1d: data = 8'b01000000;	//
+			12'hA1e: data = 8'b01000000;	//
+			12'hA1f: data = 8'b01000000;	//
 			// code x7f (del) delete, which is the all-one pattern
 			12'h7f0: data = 8'b11111111;	//********
 			12'h7f1: data = 8'b11111111;	//********
