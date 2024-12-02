@@ -36,6 +36,12 @@ set_property IOSTANDARD LVCMOS33 [get_ports right]
 set_property PACKAGE_PIN U17 	 [get_ports down]						
 set_property IOSTANDARD LVCMOS33 [get_ports down]
 
+#USB-RS232 Interface
+set_property PACKAGE_PIN B18 [get_ports RsRx]						
+set_property IOSTANDARD LVCMOS33 [get_ports RsRx]
+set_property PACKAGE_PIN A18 [get_ports RsTx]						
+set_property IOSTANDARD LVCMOS33 [get_ports RsTx]
+
 ##VGA Connector
 set_property PACKAGE_PIN N19     [get_ports {rgb[11]}]				
 set_property IOSTANDARD LVCMOS33 [get_ports {rgb[11]}]

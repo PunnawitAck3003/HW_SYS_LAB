@@ -9,6 +9,8 @@ module top(
     input left,             // btnL
     input right,            // btnR
     input [7:0] sw,         // sw[6:0] sets ASCII value
+    output wire RsTx, //uart
+    input wire RsRx, //uart
     output hsync, vsync,    // VGA connector
     output [11:0] rgb       // DAC, VGA connector
     );
@@ -27,7 +29,12 @@ module top(
     // instantiate text generation circuit
     text_screen_gen tsg(.clk(clk), .reset(reset), .video_on(w_vid_on), .set(set),
                         .up(up), .down(down), .left(left), .right(right),
-                        .sw(sw), .x(w_x), .y(w_y), .rgb(rgb_next));
+                        .sw(sw), .x(w_x), .y(w_y), .rgb(rgb_next), .data_fk(data_fk), .en(en));
+                     
+    wire [7:0] data_fk;
+    wire en;
+     
+    uart uartMyKeyboardToMyBasys(clk,RsRx,RsTx, data_fk, en);
     
     // rgb buffer
     always @(posedge clk)
