@@ -19,7 +19,7 @@ module text_screen_gen(
     input [7:0] sw,
     input [9:0] x, y,
     output reg [11:0] rgb,
-    input [7:0] data_fk,
+    input [7:0] dataFromKeyboard,
     input en
     );
     
@@ -43,7 +43,7 @@ module text_screen_gen(
     wire [6:0] cur_x_next;
     reg [4:0] cur_y_reg;
     wire [4:0] cur_y_next;
-    wire move_xl_tick, move_yu_tick, move_xr_tick, move_yd_tick, cursor_on;
+    wire move_xl_tick, move_yu_tick, move_xr_tick, move_yd_tick, move_xr, cursor_on;
     // delayed pixel count
     reg [9:0] pix_x1_reg, pix_y1_reg;
     reg [9:0] pix_x2_reg, pix_y2_reg;
@@ -55,12 +55,13 @@ module text_screen_gen(
     debounce_chu db_left(.clk(clk), .reset(reset), .sw(left), .db_level(), .db_tick(move_xl_tick));
     debounce_chu db_up(.clk(clk), .reset(reset), .sw(up), .db_level(), .db_tick(move_yu_tick));
     debounce_chu db_down(.clk(clk), .reset(reset), .sw(down), .db_level(), .db_tick(move_yd_tick));
-    debounce_chu db_right(.clk(clk), .reset(reset), .sw(right), .db_level(), .db_tick(move_xr_tick));
+    debounce_chu db_right(.clk(clk), .reset(reset), .sw(en), .db_level(), .db_tick(move_xr_tick));
+    //debounce_chu db_next(.clk(clk), .reset(reset), .sw(en), .db_level(), .db_tick(move_xr));
     // instantiate the ascii / font rom
     ascii_rom a_rom(.clk(clk), .addr(rom_addr), .data(font_word));
     
-    dual_port_ram dp_ram(.clk(clk), .we(en), .addr_a(addr_w), .addr_b(addr_r),
-                         .din_a(data_fk), .dout_a(), .dout_b(dout));
+    dual_port_ram dp_ram(.clk(clk), .we(received), .addr_a(addr_w), .addr_b(addr_r),
+                         .din_a(dataFromKeyboard), .dout_a(), .dout_b(dout));
     
     // instantiate dual-port video RAM (2^12-by-7)
 //    dual_port_ram dp_ram(.clk(clk), .we(we), .addr_a(addr_w), .addr_b(addr_r),
@@ -100,12 +101,12 @@ module text_screen_gen(
     assign bit_addr = pix_x2_reg[2:0];
     assign ascii_bit = font_word[~bit_addr];
     // new cursor position
-    assign cur_x_next = (move_xr_tick && (cur_x_reg == MAX_X - 1)) || (move_xl_tick && (cur_x_reg == 0)) ? 10 :    
-                        (move_xr_tick) ? cur_x_reg + 1 :    // move right
+    assign cur_x_next = (move_xr_tick && (cur_x_reg == MAX_X - 1)) || (move_xl_tick && (cur_x_reg == 10)) ? 10 :    
+                        (move_xr_tick || en) ? cur_x_reg + 1 :    // move right
                         (move_xl_tick) ? cur_x_reg - 1 :    // move left
                         cur_x_reg;                          // no move
                                            
-    assign cur_y_next = (move_yu_tick && (cur_y_reg == 0)) || (move_yd_tick && (cur_y_reg == MAX_Y - 1)) ? 10 :    
+    assign cur_y_next = (move_yu_tick && (cur_y_reg == 10)) || (move_yd_tick && (cur_y_reg == MAX_Y - 1)) ? 10 :    
                         (move_yu_tick) ? cur_y_reg - 1 :    // move up                        
                         (move_yd_tick) ? cur_y_reg + 1 :    // move down
                         cur_y_reg;                          // no move           

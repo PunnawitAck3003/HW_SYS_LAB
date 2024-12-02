@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Mon Dec  2 14:06:45 2024
+| Date         : Mon Dec  2 22:43:36 2024
 | Host         : LAPTOP-VB running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -43,11 +43,11 @@ Table of Contents
 | >= 0 to < 4        |    10 |
 | >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     2 |
-| >= 8 to < 10       |     5 |
+| >= 8 to < 10       |     4 |
 | >= 10 to < 12      |     2 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     6 |
+| >= 16              |     7 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -59,11 +59,11 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              16 |            5 |
-| No           | No                    | Yes                    |              72 |           19 |
-| No           | Yes                   | No                     |              48 |           12 |
-| Yes          | No                    | No                     |              28 |           13 |
-| Yes          | No                    | Yes                    |             106 |           29 |
-| Yes          | Yes                   | No                     |               1 |            1 |
+| No           | No                    | Yes                    |              72 |           23 |
+| No           | Yes                   | No                     |              48 |           13 |
+| Yes          | No                    | No                     |              20 |           14 |
+| Yes          | No                    | Yes                    |             106 |           27 |
+| Yes          | Yes                   | No                     |              17 |            8 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,33 +73,33 @@ Table of Contents
 +----------------------------------+-----------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
 |           Clock Signal           |                    Enable Signal                    |                     Set/Reset Signal                    | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------------------------+-----------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
-|  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[1]        |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[3]        |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[7]        |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[5]        |                                                         |                1 |              1 |         1.00 |
 |  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[2]        |                                                         |                1 |              1 |         1.00 |
 |  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[4]        |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[0]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[1]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[7]        |                                                         |                1 |              1 |         1.00 |
 |  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[6]        |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG                       | uartMyKeyboardToMyBasys/transmitter/bit_out_i_2_n_0 | uartMyKeyboardToMyBasys/transmitter/bit_out0            |                1 |              1 |         1.00 |
+|  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[5]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[3]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/data_out[0]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                       | uartMyKeyboardToMyBasys/transmitter/bit_out         | uartMyKeyboardToMyBasys/transmitter/bit_out0            |                1 |              1 |         1.00 |
 |  clk_IBUF_BUFG                   |                                                     |                                                         |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                   | vga/CLK                                             |                                                         |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                   | vga/r_25MHz_reg[1]_0                                |                                                         |                2 |              4 |         2.00 |
 |  clk_IBUF_BUFG                   | tsg/db_down/E[0]                                    | reset_IBUF                                              |                2 |              5 |         2.50 |
 |  baud_BUFG                       |                                                     |                                                         |                2 |              7 |         3.50 |
 |  clk_IBUF_BUFG                   | tsg/db_left/E[0]                                    | reset_IBUF                                              |                2 |              7 |         3.50 |
-|  tsg/a_rom/addr_reg_reg_rep_n_15 |                                                     |                                                         |                2 |              8 |         4.00 |
+|  baud_BUFG                       |                                                     | uartMyKeyboardToMyBasys/transmitter/count[7]_i_1__0_n_0 |                3 |              8 |         2.67 |
 |  baud_BUFG                       |                                                     | uartMyKeyboardToMyBasys/receiver/count[7]_i_1_n_0       |                2 |              8 |         4.00 |
-|  baud_BUFG                       |                                                     | uartMyKeyboardToMyBasys/transmitter/count[7]_i_1__0_n_0 |                2 |              8 |         4.00 |
-|  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/E[0]               |                                                         |                1 |              8 |         8.00 |
-|  baud_BUFG                       | uartMyKeyboardToMyBasys/transmitter/temp[7]_i_1_n_0 |                                                         |                3 |              8 |         2.67 |
-|  vga/CLK                         |                                                     | reset_IBUF                                              |                4 |             10 |         2.50 |
-|  vga/CLK                         | vga/v_count_next_1                                  | reset_IBUF                                              |                4 |             10 |         2.50 |
-|  clk_IBUF_BUFG                   | tsg/db_left/q_next_0                                | reset_IBUF                                              |                5 |             21 |         4.20 |
+|  baud_BUFG                       | uartMyKeyboardToMyBasys/transmitter/temp[7]_i_1_n_0 |                                                         |                4 |              8 |         2.00 |
+|  tsg/a_rom/addr_reg_reg_rep_n_15 |                                                     |                                                         |                2 |              8 |         4.00 |
+|  vga/r_25MHz_reg[1]_0            |                                                     | reset_IBUF                                              |                3 |             10 |         3.33 |
+|  vga/r_25MHz_reg[1]_0            | vga/v_count_next_1                                  | reset_IBUF                                              |                3 |             10 |         3.33 |
+|  baud_BUFG                       | uartMyKeyboardToMyBasys/receiver/last_rec_reg       | uartMyKeyboardToMyBasys/receiver/en_reg                 |                7 |             16 |         2.29 |
 |  clk_IBUF_BUFG                   | tsg/db_right/q_next                                 | reset_IBUF                                              |                5 |             21 |         4.20 |
 |  clk_IBUF_BUFG                   | tsg/db_up/q_next                                    | reset_IBUF                                              |                5 |             21 |         4.20 |
-|  clk_IBUF_BUFG                   | tsg/db_down/q_next                                  | reset_IBUF                                              |                6 |             21 |         3.50 |
+|  clk_IBUF_BUFG                   | tsg/db_down/q_next                                  | reset_IBUF                                              |                5 |             21 |         4.20 |
+|  clk_IBUF_BUFG                   | tsg/db_left/q_next_0                                | reset_IBUF                                              |                5 |             21 |         4.20 |
 |  clk_IBUF_BUFG                   |                                                     | uartMyKeyboardToMyBasys/baudrate_gen/clear              |                8 |             32 |         4.00 |
-|  clk_IBUF_BUFG                   |                                                     | reset_IBUF                                              |               15 |             62 |         4.13 |
+|  clk_IBUF_BUFG                   |                                                     | reset_IBUF                                              |               20 |             62 |         3.10 |
 +----------------------------------+-----------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
 
 
