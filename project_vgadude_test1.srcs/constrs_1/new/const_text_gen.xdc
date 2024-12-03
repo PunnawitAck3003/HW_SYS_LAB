@@ -71,3 +71,14 @@ set_property PACKAGE_PIN P19     [get_ports hsync]
 set_property IOSTANDARD LVCMOS33 [get_ports hsync]
 set_property PACKAGE_PIN R19     [get_ports vsync]						
 set_property IOSTANDARD LVCMOS33 [get_ports vsync]
+
+###Pmod Header JA
+#Sch name = JA1
+set_property PACKAGE_PIN J1 [get_ports ja1]
+	set_property IOSTANDARD LVCMOS33 [get_ports ja1]
+#Sch name = JA2
+set_property PACKAGE_PIN L2 [get_ports ja2]
+	set_property IOSTANDARD LVCMOS33 [get_ports ja2]
+#Sch name = JA3
+set_property PACKAGE_PIN J2 [get_ports ja3]
+	set_property IOSTANDARD LVCMOS33 [get_ports ja3]

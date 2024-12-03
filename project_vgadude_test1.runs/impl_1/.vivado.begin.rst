@@ -73,3 +73,8 @@
     <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="19244" HostCore="8" HostMemory="07969406976">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="4912" HostCore="8" HostMemory="07969406976">
+    </Process>
+</ProcessHandle>

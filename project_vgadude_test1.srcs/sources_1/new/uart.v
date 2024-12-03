@@ -23,6 +23,8 @@
 module uart(
     input clk,
     input RsRx,
+    input [7:0] data_in,
+    input mode,
     output RsTx,
     output [7:0] data_out,
     output received
@@ -30,19 +32,22 @@ module uart(
     );
     
     reg en, last_rec;
-    reg [7:0] data_in;
-    wire [7:0] data_out;
+    //reg [7:0] data_in;
+    //wire [7:0] data_out;
     wire sent, received, baud;
+    
+    wire [7:0] data;
+    assign data = (mode) ? data_in : data_out;
     
     baudrate_gen baudrate_gen(clk, baud);
     uart_rx receiver(baud, RsRx, received, data_out);
-    uart_tx transmitter(baud, data_in, en, sent, RsTx);
+    uart_tx transmitter(baud, data, en, sent, RsTx);
     
     //325 clocks change, 1 baud changes
     always @(posedge baud) begin
         if (en) en = 0;
-        if (~last_rec & received) begin // if received or pass enable
-            data_in = data_out;
+        if ((~last_rec & received) || mode) begin // if received or pass enable
+            //data_in = data_out;
             en = 1;
         end
         last_rec = received;
