@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Dec  3 16:08:42 2024
-# Process ID: 15524
-# Current directory: D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.runs/synth_1
-# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.runs/synth_1/top.vds
-# Journal file: D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.runs/synth_1\vivado.jou
+# Start of session at: Tue Dec  3 15:01:27 2024
+# Process ID: 10984
+# Current directory: D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.runs/impl_1
+# Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.runs/impl_1/top.vdi
+# Journal file: D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.runs/impl_1\vivado.jou
 # Running On        :LAPTOP-VB
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :22631
@@ -17,8 +17,8 @@
 # CPU Physical cores:8
 # CPU Logical cores :8
 # Host memory       :7969 MB
-# Swap memory       :10756 MB
-# Total Virtual     :18726 MB
-# Available Virtual :3653 MB
+# Swap memory       :9981 MB
+# Total Virtual     :17950 MB
+# Available Virtual :3690 MB
 #-----------------------------------------------------------
 source top.tcl -notrace

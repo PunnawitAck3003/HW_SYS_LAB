@@ -132,7 +132,8 @@ module text_screen_gen(
     
     assign cur_x_next = (enable && cur_x_reg == MAX_X - 1) ? 10 : (enable) ? cur_x_reg + 1 : cur_x_reg;
     
-    assign cur_y_next = (cur_y_reg == MAX_Y -1) ? 10 : (enable && cur_x_reg == MAX_X - 1) ? cur_y_reg + 1 : cur_y_reg;
+    assign cur_y_next = (cur_y_reg == MAX_Y -1) ? 10 : ((enable && cur_x_reg == MAX_X - 1)) ? cur_y_reg + 1 : cur_y_reg;
+    
 //    assign cur_x_next = ((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1)) || ((move_xl_tick || enable) && (cur_x_reg == 0)) ? 10 :    
 //                        (move_xr_tick || enable) ? cur_x_reg + 1 :    // move right
 //                        (move_xl_tick) ? cur_x_reg - 1 :    // move left

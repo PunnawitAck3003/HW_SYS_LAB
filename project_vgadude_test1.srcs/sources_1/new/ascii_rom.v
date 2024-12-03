@@ -29,14 +29,16 @@ module ascii_rom(
 	reg [11:0] addr_reg;
 	reg [7:0] rom [4095:0];
 	
-	initial $readmemb("ascii.txt", rom);
+	initial $readmemb("ascii5.txt", rom);
 	
 	always @(posedge clk)
 		addr_reg <= addr;
 	
 	always@*
-	   data = rom[addr_reg];
-		
+	   if(addr_reg >= 12'hA10) 
+	       data = rom[addr_reg - 12'h200];
+		else
+		  data = rom[addr_reg];
 //	always @*
 //		case(addr_reg)
 //			// Begin non-printable ASCII characters (00 - 1f)
