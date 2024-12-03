@@ -53,10 +53,10 @@ module text_screen_gen(
     
     // body
     // instantiate debounce for four buttons
-    debounce_chu db_left(.clk(clk), .reset(reset), .sw(left), .db_level(), .db_tick(move_xl_tick));
-    debounce_chu db_up(.clk(clk), .reset(reset), .sw(up), .db_level(), .db_tick(move_yu_tick));
-    debounce_chu db_down(.clk(clk), .reset(reset), .sw(down), .db_level(), .db_tick(move_yd_tick));
-    debounce_chu db_right(.clk(clk), .reset(reset), .sw(right), .db_level(), .db_tick(move_xr_tick));
+    //debounce_chu db_left(.clk(clk), .reset(reset), .sw(left), .db_level(), .db_tick(move_xl_tick));
+    //debounce_chu db_up(.clk(clk), .reset(reset), .sw(up), .db_level(), .db_tick(move_yu_tick));
+    //debounce_chu db_down(.clk(clk), .reset(reset), .sw(down), .db_level(), .db_tick(move_yd_tick));
+    //debounce_chu db_right(.clk(clk), .reset(reset), .sw(right), .db_level(), .db_tick(move_xr_tick));
     // debounce_chu db_keyboard(.clk(clk), .reset(reset), .sw(en), .db_level(), .db_tick(move_xr));
     
     reg [1:0] stage = 0;
@@ -128,14 +128,14 @@ module text_screen_gen(
     assign bit_addr = pix_x2_reg[2:0];
     assign ascii_bit = font_word[~bit_addr];
     // new cursor position
-    assign cur_x_next = (move_xr_tick && (cur_x_reg == MAX_X - 1)) || (move_xl_tick && (cur_x_reg == 0)) ? 10 :    
+    assign cur_x_next = ((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1)) || ((move_xl_tick || enable) && (cur_x_reg == 0)) ? 10 :    
                         (move_xr_tick || enable) ? cur_x_reg + 1 :    // move right
                         (move_xl_tick) ? cur_x_reg - 1 :    // move left
                         cur_x_reg;                          // no move
                                            
-    assign cur_y_next = (move_yu_tick && (cur_y_reg == 0)) || (move_yd_tick && (cur_y_reg == MAX_Y - 1)) ? 10 :    
+    assign cur_y_next = (move_yu_tick && (cur_y_reg == 0)) || ( (move_yd_tick || enable) && (cur_y_reg == MAX_Y - 1) && ((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1))) ? 10 :    
                         (move_yu_tick) ? cur_y_reg - 1 :    // move up                        
-                        (move_yd_tick) ? cur_y_reg + 1 :    // move down
+                        (move_yd_tick || (((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1)))) ? cur_y_reg + 1 :    // move down
                         cur_y_reg;                          // no move           
     
     // object signals
