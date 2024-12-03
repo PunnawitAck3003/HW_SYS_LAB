@@ -51,11 +51,18 @@ module top(
     
     clockDiv ffdiv(targetClk, tclk[18]);
     
-    //reg [7:0] display_out;
+    reg [7:0] display_out;
     
-    //assign display_out = (set) ? sw : data_waste;
+    always@(*) begin
+        if(set) display_out = sw;
+        else if(en2) display_out = data_waste; 
+    end
     
-    quadSevenSeg tdm(seg,dp,an0,an1,an2,an3, data_fk[7:4] , data_fk[3:0], sw[7:4], sw[3:0],targetClk);
+    wire targetClk;
+    wire an0,an1,an2,an3;
+
+    assign an = {an3,an2,an1,an0};
+    quadSevenSeg tdm(seg,dp,an0,an1,an2,an3, data_fk[3:0] , data_fk[7:4], display_out[3:0], display_out[7:4], targetClk);
     
     // rgb buffer
     always @(posedge clk)

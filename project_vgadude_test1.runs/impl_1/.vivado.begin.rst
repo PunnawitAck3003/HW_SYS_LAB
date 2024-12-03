@@ -53,3 +53,18 @@
     <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="17272" HostCore="8" HostMemory="07969406976">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="7648" HostCore="8" HostMemory="07969406976">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="9676" HostCore="8" HostMemory="07969406976">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="17968" HostCore="8" HostMemory="07969406976">
+    </Process>
+</ProcessHandle>
