@@ -42,6 +42,7 @@ module uart(
     always @(posedge baud) begin
         if (en) en = 0;
         if (~last_rec & received) begin // if received or pass enable
+            data_in = data_out;
             en = 1;
         end
         last_rec = received;
