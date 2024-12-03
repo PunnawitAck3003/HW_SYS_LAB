@@ -24,18 +24,15 @@ module uart(
     input clk,
     input RsRx,
     output RsTx,
-    output [7:0] dataOutToTop,
-    output en,
-    output reg [7:0] LEDs 
+    output [7:0] data_out,
+    output received
+    //output reg [7:0] LEDs 
     );
     
     reg en, last_rec;
     reg [7:0] data_in;
     wire [7:0] data_out;
     wire sent, received, baud;
-    wire [7:0] dataOutToTop;
-    
-    assign dataOutToTop = data_in;
     
     baudrate_gen baudrate_gen(clk, baud);
     uart_rx receiver(baud, RsRx, received, data_out);
@@ -43,21 +40,9 @@ module uart(
     
     //325 clocks change, 1 baud changes
     always @(posedge baud) begin
-        if (en) begin
-            en = 0;// add two lines below this
-            data_in = 8'h00;
-            LEDs = data_in;
-        end
-        if (~last_rec & received) begin
-            //data_in = data_out + 8'h01;
-            data_in = data_out;
-            //8'h system
-            //41 = A
-            //30 = 0
-            //ISO-8859-11 kor khai A1
-            if ( 8'h00 <= data_in && data_in <= 8'hFF) en = 1;
-            LEDs = data_in;
-            //if(data_in==8'hE0 ||data_in==8'hB8||data_in==8'h81) en = 1;//UTF-8 kor khai
+        if (en) en = 0;
+        if (~last_rec & received) begin // if received or pass enable
+            en = 1;
         end
         last_rec = received;
     end

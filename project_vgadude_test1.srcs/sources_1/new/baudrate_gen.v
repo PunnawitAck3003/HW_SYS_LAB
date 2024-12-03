@@ -25,7 +25,6 @@ module baudrate_gen(
     );
     
     integer counter;
-    //325 clocks change, 1 baud changes
     always @(posedge clk) begin
         counter = counter + 1;
         if (counter == 325) begin counter = 0; baud = ~baud; end 
