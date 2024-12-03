@@ -76,7 +76,6 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/ascii_rom.v
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/baudrate_gen.v
-  D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/debounce.v
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/receiver.v
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/simple_dual_one_clock.v
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v

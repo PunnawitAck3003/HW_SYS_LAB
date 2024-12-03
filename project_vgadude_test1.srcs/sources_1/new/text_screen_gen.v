@@ -127,16 +127,21 @@ module text_screen_gen(
     // use delayed coordinate to select a bit
     assign bit_addr = pix_x2_reg[2:0];
     assign ascii_bit = font_word[~bit_addr];
+    
     // new cursor position
-    assign cur_x_next = ((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1)) || ((move_xl_tick || enable) && (cur_x_reg == 0)) ? 10 :    
-                        (move_xr_tick || enable) ? cur_x_reg + 1 :    // move right
-                        (move_xl_tick) ? cur_x_reg - 1 :    // move left
-                        cur_x_reg;                          // no move
+    
+    assign cur_x_next = (enable && cur_x_reg == MAX_X - 1) ? 10 : (enable) ? cur_x_reg + 1 : cur_x_reg;
+    
+    assign cur_y_next = (cur_y_reg == MAX_Y -1) ? 10 : (enable && cur_x_reg == MAX_X - 1) ? cur_y_reg + 1 : cur_y_reg;
+//    assign cur_x_next = ((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1)) || ((move_xl_tick || enable) && (cur_x_reg == 0)) ? 10 :    
+//                        (move_xr_tick || enable) ? cur_x_reg + 1 :    // move right
+//                        (move_xl_tick) ? cur_x_reg - 1 :    // move left
+//                        cur_x_reg;                          // no move
                                            
-    assign cur_y_next = (move_yu_tick && (cur_y_reg == 0)) || ( (move_yd_tick || enable) && (cur_y_reg == MAX_Y - 1) && ((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1))) ? 10 :    
-                        (move_yu_tick) ? cur_y_reg - 1 :    // move up                        
-                        (move_yd_tick || (((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1)))) ? cur_y_reg + 1 :    // move down
-                        cur_y_reg;                          // no move           
+//    assign cur_y_next = (move_yu_tick && (cur_y_reg == 0)) || ( (move_yd_tick || enable) && (cur_y_reg == MAX_Y - 1) && ((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1))) ? 10 :    
+//                        (move_yu_tick) ? cur_y_reg - 1 :    // move up                        
+//                        (move_yd_tick || (((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1)))) ? cur_y_reg + 1 :    // move down
+//                        cur_y_reg;                          // no move           
     
     // object signals
     // green over black and reversed video for cursor
