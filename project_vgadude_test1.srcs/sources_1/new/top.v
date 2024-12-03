@@ -32,8 +32,8 @@ module top(
     wire [7:0] data_fk, data_waste;
     wire en1, en2;
      
-    uart uartMyKeyboardToMyBasys(.clk(clk), .RsRx(RsRx), .RsTx(ja2), .data_in(0), .data_out(data_fk), .received(en1), .mode(1'b0));
-    uart uartBoardToBoard(.clk(clk), .RsRx(ja1), .RsTx(RsTx), .data_in(sw[7:0]), .data_out(data_waste), .received(en2), .mode(set));
+    uart uartMyKeyboardToMyBasys(.clk(clk), .RsRx(ja1), .RsTx(RsTx), .data_in(0), .data_out(data_fk), .received(en1), .mode(1'b0));
+    uart uartBoardToBoard(.clk(clk), .RsRx(RsRx), .RsTx(ja2), .data_in(sw[7:0]), .data_out(data_waste), .received(en2), .mode(set));
     
     // rgb buffer
     always @(posedge clk)
