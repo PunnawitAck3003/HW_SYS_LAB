@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Tue Dec  3 16:10:35 2024
+| Date         : Tue Dec  3 16:51:24 2024
 | Host         : LAPTOP-VB running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    35 |
-|    Minimum number of control sets                        |    35 |
+| Total control sets                                       |    54 |
+|    Minimum number of control sets                        |    54 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   153 |
+| Unused register locations in slices containing registers |   284 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,14 +39,14 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    35 |
-| >= 0 to < 4        |    18 |
+| Total control sets |    54 |
+| >= 0 to < 4        |    37 |
 | >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     3 |
 | >= 8 to < 10       |     6 |
 | >= 10 to < 12      |     2 |
-| >= 12 to < 14      |     1 |
-| >= 14 to < 16      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
 | >= 16              |     3 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              27 |           11 |
-| No           | No                    | Yes                    |              64 |           15 |
+| No           | No                    | No                     |              48 |           31 |
+| No           | No                    | Yes                    |              64 |           17 |
 | No           | Yes                   | No                     |              96 |           27 |
-| Yes          | No                    | No                     |              36 |           21 |
-| Yes          | No                    | Yes                    |              22 |            8 |
+| Yes          | No                    | No                     |              36 |           20 |
+| Yes          | No                    | Yes                    |              22 |            7 |
 | Yes          | Yes                   | No                     |               2 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,44 +70,63 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------+-----------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
-|      Clock Signal     |                    Enable Signal                    |                     Set/Reset Signal                    | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------------+-----------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
-|  last_bit_reg_i_1_n_0 | uartBoardToBoard/receiver/data_out[2]               |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG            | uartMyKeyboardToMyBasys/receiver/data_out[6]        |                                                         |                1 |              1 |         1.00 |
-|  last_bit_reg_i_1_n_0 | uartBoardToBoard/receiver/data_out[7]               |                                                         |                1 |              1 |         1.00 |
-|  last_bit_reg_i_1_n_0 | uartBoardToBoard/transmitter/bit_out_i_2__0_n_0     | uartBoardToBoard/transmitter/bit_out0                   |                1 |              1 |         1.00 |
-|  last_bit_reg_i_1_n_0 | uartBoardToBoard/receiver/data_out[6]               |                                                         |                1 |              1 |         1.00 |
-|  last_bit_reg_i_1_n_0 | uartBoardToBoard/receiver/data_out[4]               |                                                         |                1 |              1 |         1.00 |
-|  last_bit_reg_i_1_n_0 | uartBoardToBoard/receiver/data_out[5]               |                                                         |                1 |              1 |         1.00 |
-|  last_bit_reg_i_1_n_0 | uartBoardToBoard/receiver/data_out[0]               |                                                         |                1 |              1 |         1.00 |
-|  last_bit_reg_i_1_n_0 | uartBoardToBoard/receiver/data_out[1]               |                                                         |                1 |              1 |         1.00 |
-|  last_bit_reg_i_1_n_0 | uartBoardToBoard/receiver/data_out[3]               |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG            | uartMyKeyboardToMyBasys/receiver/data_out[2]        |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG            | uartMyKeyboardToMyBasys/receiver/data_out[3]        |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG            | uartMyKeyboardToMyBasys/receiver/data_out[0]        |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG            | uartMyKeyboardToMyBasys/receiver/data_out[4]        |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG            | uartMyKeyboardToMyBasys/receiver/data_out[1]        |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG            | uartMyKeyboardToMyBasys/receiver/data_out[5]        |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG            | uartMyKeyboardToMyBasys/receiver/data_out[7]        |                                                         |                1 |              1 |         1.00 |
-|  baud_BUFG            | uartMyKeyboardToMyBasys/transmitter/bit_out_i_2_n_0 | uartMyKeyboardToMyBasys/transmitter/bit_out0            |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG        | vga/CLK                                             |                                                         |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG        | tsg/cur_y_reg[4]_i_1_n_0                            | reset_IBUF                                              |                1 |              5 |         5.00 |
-|  baud_BUFG            |                                                     |                                                         |                2 |              7 |         3.50 |
-|  clk_IBUF_BUFG        | tsg/enable_reg_n_0                                  | reset_IBUF                                              |                4 |              7 |         1.75 |
-|  last_bit_reg_i_1_n_0 |                                                     |                                                         |                2 |              7 |         3.50 |
-|  baud_BUFG            | uartMyKeyboardToMyBasys/transmitter/temp[7]_i_1_n_0 |                                                         |                2 |              8 |         4.00 |
-|  last_bit_reg_i_1_n_0 | uartBoardToBoard/transmitter/temp[7]_i_1__0_n_0     |                                                         |                1 |              8 |         8.00 |
-|  baud_BUFG            |                                                     | uartMyKeyboardToMyBasys/receiver/count[7]_i_1_n_0       |                3 |              8 |         2.67 |
-|  baud_BUFG            |                                                     | uartMyKeyboardToMyBasys/transmitter/count[7]_i_1__0_n_0 |                3 |              8 |         2.67 |
-|  last_bit_reg_i_1_n_0 |                                                     | uartBoardToBoard/receiver/count[7]_i_1__1_n_0           |                2 |              8 |         4.00 |
-|  last_bit_reg_i_1_n_0 |                                                     | uartBoardToBoard/transmitter/count[7]_i_1__2_n_0        |                3 |              8 |         2.67 |
-|  vga/CLK              | vga/v_count_next_1                                  | reset_IBUF                                              |                3 |             10 |         3.33 |
-|  vga/CLK              |                                                     | reset_IBUF                                              |                3 |             10 |         3.33 |
-|  clk_IBUF_BUFG        |                                                     |                                                         |                7 |             13 |         1.86 |
-|  clk_IBUF_BUFG        |                                                     | uartBoardToBoard/baudrate_gen/counter[0]_i_1__0_n_0     |                8 |             32 |         4.00 |
-|  clk_IBUF_BUFG        |                                                     | uartMyKeyboardToMyBasys/baudrate_gen/clear              |                8 |             32 |         4.00 |
-|  clk_IBUF_BUFG        |                                                     | reset_IBUF                                              |               12 |             54 |         4.50 |
-+-----------------------+-----------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
++-------------------------------+-----------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
+|          Clock Signal         |                    Enable Signal                    |                     Set/Reset Signal                    | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------+-----------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
+|  genblk1[3].div/clkDiv_reg_0  |                                                     |                                                         |                1 |              1 |         1.00 |
+|  last_bit_reg_i_1_n_0         | uartBoardToBoard/transmitter/bit_out_i_2__0_n_0     | uartBoardToBoard/transmitter/bit_out0                   |                1 |              1 |         1.00 |
+|  genblk1[0].div/clkDiv_reg_0  |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[10].div/clkDiv_reg_0 |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[2].div/clkDiv_reg_0  |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[6].div/clkDiv_reg_0  |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[9].div/clkDiv_reg_0  |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[5].div/clkDiv_reg_0  |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[7].div/clkDiv_reg_0  |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[8].div/clkDiv_reg_0  |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[4].div/clkDiv_reg_0  |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[14].div/clkDiv_reg_0 |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[12].div/clkDiv_reg_0 |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[11].div/clkDiv_reg_0 |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[17].div/clkDiv_reg_0 |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[13].div/clkDiv_reg_0 |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[16].div/clkDiv_reg_0 |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[15].div/clkDiv_reg_0 |                                                     |                                                         |                1 |              1 |         1.00 |
+|  genblk1[1].div/clkDiv_reg_0  |                                                     |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                    | uartMyKeyboardToMyBasys/receiver/data_out[3]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                    | uartMyKeyboardToMyBasys/receiver/data_out[5]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                    | uartMyKeyboardToMyBasys/receiver/data_out[0]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                    | uartMyKeyboardToMyBasys/receiver/data_out[4]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                    | uartMyKeyboardToMyBasys/receiver/data_out[2]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                    | uartMyKeyboardToMyBasys/receiver/data_out[1]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                    | uartMyKeyboardToMyBasys/receiver/data_out[6]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                    | uartMyKeyboardToMyBasys/receiver/data_out[7]        |                                                         |                1 |              1 |         1.00 |
+|  baud_BUFG                    | uartMyKeyboardToMyBasys/transmitter/bit_out_i_2_n_0 | uartMyKeyboardToMyBasys/transmitter/bit_out0            |                1 |              1 |         1.00 |
+|  last_bit_reg_i_1_n_0         | uartBoardToBoard/receiver/data_out_0[2]             |                                                         |                1 |              1 |         1.00 |
+|  last_bit_reg_i_1_n_0         | uartBoardToBoard/receiver/data_out_0[1]             |                                                         |                1 |              1 |         1.00 |
+|  last_bit_reg_i_1_n_0         | uartBoardToBoard/receiver/data_out_0[5]             |                                                         |                1 |              1 |         1.00 |
+|  last_bit_reg_i_1_n_0         | uartBoardToBoard/receiver/data_out_0[7]             |                                                         |                1 |              1 |         1.00 |
+|  last_bit_reg_i_1_n_0         | uartBoardToBoard/receiver/data_out_0[0]             |                                                         |                1 |              1 |         1.00 |
+|  last_bit_reg_i_1_n_0         | uartBoardToBoard/receiver/data_out_0[6]             |                                                         |                1 |              1 |         1.00 |
+|  last_bit_reg_i_1_n_0         | uartBoardToBoard/receiver/data_out_0[3]             |                                                         |                1 |              1 |         1.00 |
+|  last_bit_reg_i_1_n_0         | uartBoardToBoard/receiver/data_out_0[4]             |                                                         |                1 |              1 |         1.00 |
+|  ffdiv/CLK                    |                                                     |                                                         |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                | vga/CLK                                             |                                                         |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                | tsg/cur_y_reg[4]_i_1_n_0                            | reset_IBUF                                              |                2 |              5 |         2.50 |
+|  last_bit_reg_i_1_n_0         |                                                     |                                                         |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG                | tsg/enable_reg_n_0                                  | reset_IBUF                                              |                2 |              7 |         3.50 |
+|  baud_BUFG                    |                                                     |                                                         |                2 |              7 |         3.50 |
+|  last_bit_reg_i_1_n_0         |                                                     | uartBoardToBoard/receiver/count[7]_i_1__1_n_0           |                3 |              8 |         2.67 |
+|  last_bit_reg_i_1_n_0         |                                                     | uartBoardToBoard/transmitter/count[7]_i_1__2_n_0        |                2 |              8 |         4.00 |
+|  baud_BUFG                    | uartMyKeyboardToMyBasys/transmitter/temp[7]_i_1_n_0 |                                                         |                2 |              8 |         4.00 |
+|  baud_BUFG                    |                                                     | uartMyKeyboardToMyBasys/receiver/count[7]_i_1_n_0       |                3 |              8 |         2.67 |
+|  baud_BUFG                    |                                                     | uartMyKeyboardToMyBasys/transmitter/count[7]_i_1__0_n_0 |                3 |              8 |         2.67 |
+|  last_bit_reg_i_1_n_0         | uartBoardToBoard/transmitter/temp[7]_i_1__0_n_0     |                                                         |                1 |              8 |         8.00 |
+|  vga/CLK                      | vga/v_count_next_1                                  | reset_IBUF                                              |                3 |             10 |         3.33 |
+|  vga/CLK                      |                                                     | reset_IBUF                                              |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG                |                                                     |                                                         |                8 |             14 |         1.75 |
+|  clk_IBUF_BUFG                |                                                     | uartMyKeyboardToMyBasys/baudrate_gen/clear              |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                |                                                     | uartBoardToBoard/baudrate_gen/counter[0]_i_1__0_n_0     |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                |                                                     | reset_IBUF                                              |               13 |             54 |         4.15 |
++-------------------------------+-----------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
 
 

@@ -10,7 +10,10 @@ module top(
     output wire RsTx, //uart
     input wire RsRx, //uart
     output hsync, vsync,    // VGA connector
-    output [11:0] rgb       // DAC, VGA connector
+    output [11:0] rgb,       // DAC, VGA connector
+    output [6:0] seg,
+    output dp,
+    output [3:0] an
     );
     
     // signals
@@ -34,6 +37,25 @@ module top(
      
     uart uartMyKeyboardToMyBasys(.clk(clk), .RsRx(ja1), .RsTx(RsTx), .data_in(0), .data_out(data_fk), .received(en1), .mode(1'b0));
     uart uartBoardToBoard(.clk(clk), .RsRx(RsRx), .RsTx(ja2), .data_in(sw[7:0]), .data_out(data_waste), .received(en2), .mode(set));
+    
+    // div clk for display
+    wire [18:0] tclk;
+    assign tclk[0] = clk;
+    
+    genvar c;
+    generate for(c=0;c<18;c=c+1)
+    begin
+        clockDiv div(tclk[c+1], tclk[c]);
+    end
+    endgenerate
+    
+    clockDiv ffdiv(targetClk, tclk[18]);
+    
+    //reg [7:0] display_out;
+    
+    //assign display_out = (set) ? sw : data_waste;
+    
+    quadSevenSeg tdm(seg,dp,an0,an1,an2,an3, data_fk[7:4] , data_fk[3:0], sw[7:4], sw[3:0],targetClk);
     
     // rgb buffer
     always @(posedge clk)

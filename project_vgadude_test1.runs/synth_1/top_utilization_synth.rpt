@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Tue Dec  3 16:09:44 2024
+| Date         : Tue Dec  3 16:50:29 2024
 | Host         : LAPTOP-VB running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  496 |     0 |          0 |     20800 |  2.38 |
-|   LUT as Logic          |  496 |     0 |          0 |     20800 |  2.38 |
+| Slice LUTs*             |  524 |     0 |          0 |     20800 |  2.52 |
+|   LUT as Logic          |  524 |     0 |          0 |     20800 |  2.52 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |  244 |     0 |          0 |     41600 |  0.59 |
-|   Register as Flip Flop |  244 |     0 |          0 |     41600 |  0.59 |
+| Slice Registers         |  265 |     0 |          0 |     41600 |  0.64 |
+|   Register as Flip Flop |  265 |     0 |          0 |     41600 |  0.64 |
 |   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
 | F7 Muxes                |   37 |     0 |          0 |     16300 |  0.23 |
 | F8 Muxes                |    1 |     0 |          0 |      8150 |  0.01 |
@@ -60,7 +60,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 4     |          Yes |           - |          Set |
 | 82    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 158   |          Yes |       Reset |            - |
+| 179   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -94,7 +94,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   29 |     0 |          0 |       106 | 27.36 |
+| Bonded IOB                  |   41 |     0 |          0 |       106 | 38.68 |
 | Bonded IPADs                |    0 |     0 |          0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         5 |  0.00 |
@@ -153,18 +153,19 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  333 |                 LUT |
-| FDRE     |  158 |        Flop & Latch |
+| LUT6     |  337 |                 LUT |
+| FDRE     |  179 |        Flop & Latch |
 | LUT5     |  100 |                 LUT |
 | FDCE     |   82 |        Flop & Latch |
-| LUT4     |   50 |                 LUT |
+| LUT4     |   57 |                 LUT |
 | LUT3     |   46 |                 LUT |
 | MUXF7    |   37 |               MuxFx |
+| LUT1     |   37 |                 LUT |
 | CARRY4   |   33 |          CarryLogic |
-| LUT2     |   30 |                 LUT |
-| LUT1     |   17 |                 LUT |
-| OBUF     |   16 |                  IO |
+| LUT2     |   31 |                 LUT |
+| OBUF     |   24 |                  IO |
 | IBUF     |   13 |                  IO |
+| OBUFT    |    4 |                  IO |
 | FDPE     |    4 |        Flop & Latch |
 | BUFG     |    3 |               Clock |
 | RAMB36E1 |    1 |        Block Memory |
