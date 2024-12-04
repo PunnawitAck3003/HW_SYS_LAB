@@ -23,13 +23,13 @@ module top(
     wire [11:0] rgb_next;
     
     // instantiate vga controller
-    vga_controller vga(.clk_100MHz(clk), .reset(reset), .video_on(w_vid_on),
+    vga_controller vga(.clk_100MHz(clk), .reset(), .video_on(w_vid_on),
                        .hsync(hsync), .vsync(vsync), .p_tick(w_p_tick), 
                        .x(w_x), .y(w_y));
     
     // instantiate text generation circuit
     text_screen_gen tsg(.clk(clk), .reset(reset), .video_on(w_vid_on), .set(set),
-                        .sw(sw), .x(w_x), .y(w_y), .rgb(rgb_next), .data_fk(data_fk), .en(en1), .debug(enable));
+                        .sw(sw), .x(w_x), .y(w_y), .rgb(rgb_next), .data_fk(data_fk), .en(en1));
                      
     wire [7:0] data_fk, data_waste;
     wire en1, en2;    

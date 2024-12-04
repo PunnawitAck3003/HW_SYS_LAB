@@ -8,12 +8,12 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Wed Dec  4 14:21:49 2024
+  **** Start of session at: Wed Dec  4 17:35:08 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 523.191 ; gain = 236.434
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 521.664 ; gain = 235.480
 Command: read_checkpoint -auto_incremental -incremental D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/utils_1/imports/synth_1/top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,9 +27,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2012
+INFO: [Synth 8-7075] Helper process launched with PID 19076
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1375.145 ; gain = 449.418
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1373.895 ; gain = 450.363
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'clkDiv' is not allowed [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/clockDiv.v:27]
 WARNING: [Synth 8-10714] extra semicolon is not allowed here in this dialect; use SystemVerilog mode instead [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/clockDiv.v:31]
@@ -38,6 +38,7 @@ WARNING: [Synth 8-11121] redeclaration of ANSI port 'segments' is not allowed [D
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'enable' is not allowed [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/singlepulser.v:30]
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'en' is not allowed [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:48]
 INFO: [Synth 8-11241] undeclared symbol 'enable', assumed default net type 'wire' [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:50]
+INFO: [Synth 8-11241] undeclared symbol 'not_show', assumed default net type 'wire' [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:92]
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'en' is not allowed [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/uart.v:35]
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'received' is not allowed [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/uart.v:36]
 INFO: [Synth 8-11241] undeclared symbol 'data_fk', assumed default net type 'wire' [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/top.v:32]
@@ -77,7 +78,40 @@ WARNING: [Synth 8-567] referenced signal 'num2' should be on the sensitivity lis
 WARNING: [Synth 8-567] referenced signal 'num3' should be on the sensitivity list [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/quadSevenSeg.v:61]
 INFO: [Synth 8-6155] done synthesizing module 'quadSevenSeg' (0#1) [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/quadSevenSeg.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/top.v:3]
+WARNING: [Synth 8-7137] Register max_row_reg[31] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[30] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[29] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[28] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[27] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[26] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[25] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[24] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[23] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[22] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[21] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[20] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[19] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[18] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[17] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[16] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[15] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[14] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[13] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[12] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[11] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[9] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[8] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[7] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[6] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[5] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[4] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[3] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[2] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[1] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
+WARNING: [Synth 8-7137] Register max_row_reg[0] in module text_screen_gen has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/text_screen_gen.v:76]
 WARNING: [Synth 8-7137] Register display_out_reg in module top has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/top.v:59]
+WARNING: [Synth 8-7129] Port reset in module dual_port_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port video_on in module text_screen_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port set in module text_screen_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sw[7] in module text_screen_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sw[6] in module text_screen_gen is either unconnected or has no load
@@ -88,47 +122,23 @@ WARNING: [Synth 8-7129] Port sw[2] in module text_screen_gen is either unconnect
 WARNING: [Synth 8-7129] Port sw[1] in module text_screen_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sw[0] in module text_screen_gen is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1490.145 ; gain = 564.418
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1491.969 ; gain = 568.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1490.145 ; gain = 564.418
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1491.969 ; gain = 568.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1490.145 ; gain = 564.418
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1491.969 ; gain = 568.438
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1490.145 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1491.969 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc]
-WARNING: [Vivado 12-584] No ports matched 'up'. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'up'. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'left'. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'left'. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'right'. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'right'. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'down'. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'down'. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'ja3'. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:112]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/constrs_1/new/const_text_gen.xdc:112]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -140,28 +150,28 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1588.695 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1591.250 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1588.695 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1591.250 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'stage_reg' in module 'singlepulser'
 ---------------------------------------------------------------------------------------------------
@@ -176,7 +186,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'stage_reg' in module 'singl
 INFO: [Synth 8-3354] encoded FSM with state register 'stage_reg' using encoding 'sequential' in module 'singlepulser'
 WARNING: [Synth 8-6430] The Block RAM "dual_port_ram:/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -194,22 +204,22 @@ Detailed RTL Component Info :
 	               12 Bit    Registers := 4     
 	               10 Bit    Registers := 8     
 	                8 Bit    Registers := 9     
-	                7 Bit    Registers := 1     
-	                5 Bit    Registers := 1     
+	                7 Bit    Registers := 33    
+	                5 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 43    
 +---RAMs : 
 	              32K Bit	(4096 X 8 bit)          RAMs := 1     
 +---Muxes : 
 	   2 Input   12 Bit        Muxes := 1     
-	   5 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 4     
-	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
 	   2 Input    5 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 2     
 	   3 Input    2 Bit        Muxes := 2     
 	   2 Input    2 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 38    
 	   3 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -234,7 +244,7 @@ RAM Pipeline Warning: Read Address Register Found For RAM tsg/dp_ram/ram_reg. We
 WARNING: [Synth 8-6430] The Block RAM "top/tsg/dp_ram/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
 RAM Pipeline Warning: Read Address Register Found For RAM tsg/dp_ram/ram_reg. We will not be able to pipeline it. This may degrade performance. 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -264,13 +274,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -290,7 +300,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -308,37 +318,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -355,47 +365,47 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BUFG     |     3|
-|2     |CARRY4   |    33|
-|3     |LUT1     |    37|
-|4     |LUT2     |    51|
-|5     |LUT3     |    48|
-|6     |LUT4     |    58|
-|7     |LUT5     |   108|
-|8     |LUT6     |   337|
-|9     |MUXF7    |    37|
-|10    |MUXF8    |     1|
+|2     |CARRY4   |    34|
+|3     |LUT1     |    36|
+|4     |LUT2     |    54|
+|5     |LUT3     |    45|
+|6     |LUT4     |    64|
+|7     |LUT5     |   117|
+|8     |LUT6     |   436|
+|9     |MUXF7    |    55|
+|10    |MUXF8    |     3|
 |11    |RAMB36E1 |     1|
-|12    |FDCE     |    90|
-|13    |FDPE     |    12|
-|14    |FDRE     |   182|
+|12    |FDCE     |    54|
+|13    |FDPE     |    16|
+|14    |FDRE     |   441|
 |15    |LDC      |     8|
 |16    |IBUF     |    13|
 |17    |OBUF     |    28|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 1591.250 ; gain = 667.719
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1588.695 ; gain = 564.418
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1588.695 ; gain = 662.969
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:43 . Memory (MB): peak = 1591.250 ; gain = 568.438
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1591.250 ; gain = 667.719
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1588.695 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 80 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1591.250 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 101 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1588.695 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1591.250 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   LDC => LDCE: 8 instances
 
-Synth Design complete | Checksum: c3f79098
+Synth Design complete | Checksum: 488331b2
 INFO: [Common 17-83] Releasing license: Synthesis
-56 Infos, 38 Warnings, 10 Critical Warnings and 0 Errors encountered.
+57 Infos, 63 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 1588.695 ; gain = 1060.191
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:53 . Memory (MB): peak = 1591.250 ; gain = 1065.371
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1588.695 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1591.250 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.runs/synth_1/top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec  4 14:22:52 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  4 17:36:14 2024...
