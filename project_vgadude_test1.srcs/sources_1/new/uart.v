@@ -27,13 +27,12 @@ module uart(
     input mode,
     output RsTx,
     output [7:0] data_out,
-    output received
+    output received,
+    output en
     //output reg [7:0] LEDs 
     );
     
     reg en, last_rec;
-    //reg [7:0] data_in;
-    //wire [7:0] data_out;
     wire sent, received, baud;
     
     wire [7:0] data;

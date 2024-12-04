@@ -12,10 +12,6 @@ module text_screen_gen(
     input clk, reset,
     input video_on,
     input set,
-    input up,
-    input down,
-    input left,
-    input right,
     input [7:0] sw,
     input [9:0] x, y,
     output reg [11:0] rgb,
@@ -51,38 +47,7 @@ module text_screen_gen(
     wire [11:0] text_rgb, text_rev_rgb;
     wire en, move_xr;
     
-    // body
-    // instantiate debounce for four buttons
-    //debounce_chu db_left(.clk(clk), .reset(reset), .sw(left), .db_level(), .db_tick(move_xl_tick));
-    //debounce_chu db_up(.clk(clk), .reset(reset), .sw(up), .db_level(), .db_tick(move_yu_tick));
-    //debounce_chu db_down(.clk(clk), .reset(reset), .sw(down), .db_level(), .db_tick(move_yd_tick));
-    //debounce_chu db_right(.clk(clk), .reset(reset), .sw(right), .db_level(), .db_tick(move_xr_tick));
-    // debounce_chu db_keyboard(.clk(clk), .reset(reset), .sw(en), .db_level(), .db_tick(move_xr));
-    
-    reg [1:0] stage = 0;
-    reg enable = 0;
-    always @(posedge clk) begin
-        if (stage == 0) begin
-            if(en) begin
-                enable = 1;
-                stage = 1; 
-            end
-        end
-        else if (stage == 1) begin
-            if(en) begin
-                stage = 2;
-            end
-            else begin
-                stage = 0;
-            end
-                enable = 0;
-        end
-        else begin
-            if(!en) begin
-                stage = 0;
-            end
-        end
-    end
+    singlepulser singlepulser(.clk(clk), .en(en), .enable(enable));
     
     // instantiate the ascii / font rom
     ascii_rom a_rom(.clk(clk), .addr(rom_addr), .data(font_word));
@@ -133,17 +98,7 @@ module text_screen_gen(
     assign cur_x_next = (enable && cur_x_reg == MAX_X - 1) ? 10 : (enable) ? cur_x_reg + 1 : cur_x_reg;
     
     assign cur_y_next = (cur_y_reg == MAX_Y -1) ? 10 : ((enable && cur_x_reg == MAX_X - 1)) ? cur_y_reg + 1 : cur_y_reg;
-    
-//    assign cur_x_next = ((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1)) || ((move_xl_tick || enable) && (cur_x_reg == 0)) ? 10 :    
-//                        (move_xr_tick || enable) ? cur_x_reg + 1 :    // move right
-//                        (move_xl_tick) ? cur_x_reg - 1 :    // move left
-//                        cur_x_reg;                          // no move
-                                           
-//    assign cur_y_next = (move_yu_tick && (cur_y_reg == 0)) || ( (move_yd_tick || enable) && (cur_y_reg == MAX_Y - 1) && ((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1))) ? 10 :    
-//                        (move_yu_tick) ? cur_y_reg - 1 :    // move up                        
-//                        (move_yd_tick || (((move_xr_tick || enable) && (cur_x_reg == MAX_X - 1)))) ? cur_y_reg + 1 :    // move down
-//                        cur_y_reg;                          // no move           
-    
+
     // object signals
     // green over black and reversed video for cursor
     assign text_rgb = (ascii_bit) ? 12'h0F0 : 12'h000;

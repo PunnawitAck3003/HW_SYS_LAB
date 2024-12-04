@@ -29,14 +29,14 @@ module top(
     
     // instantiate text generation circuit
     text_screen_gen tsg(.clk(clk), .reset(reset), .video_on(w_vid_on), .set(set),
-                        .up(up), .down(down), .left(left), .right(right),
-                        .sw(sw), .x(w_x), .y(w_y), .rgb(rgb_next), .data_fk(data_fk), .en(en1));
+                        .sw(sw), .x(w_x), .y(w_y), .rgb(rgb_next), .data_fk(data_fk), .en(en1), .debug(enable));
                      
     wire [7:0] data_fk, data_waste;
-    wire en1, en2;
-     
-    uart uartMyKeyboardToMyBasys(.clk(clk), .RsRx(ja1), .RsTx(RsTx), .data_in(0), .data_out(data_fk), .received(en1), .mode(1'b0));
-    uart uartBoardToBoard(.clk(clk), .RsRx(RsRx), .RsTx(ja2), .data_in(sw[7:0]), .data_out(data_waste), .received(en2), .mode(set));
+    wire en1, en2;    
+    wire ent1, ent2;
+    // communication between board 
+    uart uartMyKeyboardToMyBasys(.clk(clk), .RsRx(ja1), .RsTx(RsTx), .data_in(0), .data_out(data_fk), .received(en1), .mode(1'b0), .en(ent1));
+    uart uartBoardToBoard(.clk(clk), .RsRx(RsRx), .RsTx(ja2), .data_in(sw[7:0]), .data_out(data_waste), .received(en2), .mode(set), .en(ent2));
     
     // div clk for display
     wire [18:0] tclk;
@@ -48,19 +48,20 @@ module top(
         clockDiv div(tclk[c+1], tclk[c]);
     end
     endgenerate
-    
+    wire targetClk;
     clockDiv ffdiv(targetClk, tclk[18]);
-    
-    reg [7:0] display_out;
-    
-    always@(*) begin
+   
+    // display logic
+    reg [7:0] display_out;  
+    wire enable;
+    singlepulser singlepulser(.clk(clk), .en(ent2), .enable(enable));
+    always@(posedge set or posedge enable) begin
         if(set) display_out = sw;
-        else if(en2) display_out = data_waste; 
+        else if(enable) display_out = data_waste; 
     end
     
-    wire targetClk;
+    // segment display
     wire an0,an1,an2,an3;
-
     assign an = {an3,an2,an1,an0};
     quadSevenSeg tdm(seg,dp,an0,an1,an2,an3, data_fk[3:0] , data_fk[7:4], display_out[3:0], display_out[7:4], targetClk);
     
