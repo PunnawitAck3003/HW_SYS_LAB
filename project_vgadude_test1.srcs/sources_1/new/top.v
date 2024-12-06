@@ -35,9 +35,10 @@ module top(
                     
     // keyborad
 //     wire [7:0] dataPS2;
-     // reg [7:0] sentData;
+//     reg [7:0] sentData;
 //     wire PS2en;
-//     PS2keyboardLogic keyboard(.clk(clk), .PS2Data(PS2Data), .PS2Clk(PS2Clk), .dataPS2(dataPS2), .PS2en(PS2en), .tsent(sent2));   
+//     ps2_keyboard keyboard(.clk(clk), .PS2Clk(PS2Clk), .PS2Data(PS2Data), .key_code(dataPS2), .key_pressed(PS2en));
+     //PS2keyboardLogic keyboard(.clk(clk), .PS2Data(PS2Data), .PS2Clk(PS2Clk), .dataPS2(dataPS2), .PS2en(PS2en), .tsent(sent2));   
                   
 //     always@(posedge set or posedge PS2en) begin
 //        if(set) sentData = sw[7:0];
@@ -49,8 +50,8 @@ module top(
     wire ent1, ent2;
     wire sent1, sent2;
     // communication between board 
-    uart uartMyKeyboardToMyBasys(.clk(clk), .RsRx(ja1), .RsTx(RsTx), .data_in(0), .data_out(data_fk), .received(en1), .mode(1'b0), .en(ent1), .sent(sent1));
-    uart uartBoardToBoard(.clk(clk), .RsRx(RsRx), .RsTx(ja2), .data_in(sw[7:0]), .data_out(data_waste), .received(en2), .mode(set), .en(ent2), .sent(sent2));
+    uart uartAnotherBoardToMyPutty(.clk(clk), .RsRx(ja1), .RsTx(RsTx), .data_in(0), .data_out(data_fk), .received(en1), .mode(1'b0), .en(ent1), .sent(sent1));
+    uart uartPuttyToAnotherBoard(.clk(clk), .RsRx(RsRx), .RsTx(ja2), .data_in(sw[7:0]), .data_out(data_waste), .received(en2), .mode(set), .en(ent2), .sent(sent2));
     
     // div clk for display
     wire targetClk;

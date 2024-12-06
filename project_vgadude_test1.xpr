@@ -188,6 +188,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/ps2_keyboard.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/PS2Receiver.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -273,6 +281,9 @@
       <File Path="$PSRCDIR/sources_1/new/ascii2.txt"/>
       <File Path="$PSRCDIR/sources_1/new/ascii5.txt"/>
       <File Path="$PSRCDIR/sources_1/new/ascii4.txt"/>
+      <File Path="$PSRCDIR/sources_1/new/ascii6.txt"/>
+      <File Path="$PSRCDIR/sources_1/new/ascii7.txt"/>
+      <File Path="$PSRCDIR/sources_1/new/ascii8.txt"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="top"/>

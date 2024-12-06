@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Fri Dec  6 17:56:08 2024
-# Process ID: 22272
+# Start of session at: Fri Dec  6 19:11:12 2024
+# Process ID: 10400
 # Current directory: D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.runs/synth_1/top.vds
@@ -17,8 +17,8 @@
 # CPU Physical cores:8
 # CPU Logical cores :8
 # Host memory       :7969 MB
-# Swap memory       :9847 MB
-# Total Virtual     :17817 MB
-# Available Virtual :3384 MB
+# Swap memory       :10703 MB
+# Total Virtual     :18673 MB
+# Available Virtual :3735 MB
 #-----------------------------------------------------------
 source top.tcl -notrace

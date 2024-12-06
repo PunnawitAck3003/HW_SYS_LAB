@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Fri Dec  6 17:59:06 2024
+| Date         : Fri Dec  6 19:14:01 2024
 | Host         : LAPTOP-VB running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -219,402 +219,402 @@ Related violations: <none>
 
 TIMING-17#37 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/en_reg/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/en_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#38 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/last_rec_reg/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/last_rec_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#39 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/count_reg[0]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/count_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#40 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/count_reg[1]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#41 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/count_reg[2]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/count_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#42 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/count_reg[3]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/count_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#43 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/count_reg[4]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/count_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#44 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/count_reg[5]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/count_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#45 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/count_reg[6]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/count_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#46 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/count_reg[7]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/count_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#47 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/data_out_reg[0]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/data_out_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/data_out_reg[1]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/data_out_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/data_out_reg[2]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/data_out_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/data_out_reg[3]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/data_out_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#51 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/data_out_reg[4]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/data_out_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#52 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/data_out_reg[5]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/data_out_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#53 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/data_out_reg[6]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/data_out_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#54 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/data_out_reg[7]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/data_out_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#55 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/last_bit_reg/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/last_bit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#56 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/received_reg/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/received_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#57 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/receiver/receiving_reg/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/receiver/receiving_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#58 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/bit_out_reg/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/bit_out_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#59 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/count_reg[0]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/count_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#60 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/count_reg[1]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#61 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/count_reg[2]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/count_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#62 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/count_reg[3]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/count_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#63 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/count_reg[4]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/count_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#64 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/count_reg[5]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/count_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#65 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/count_reg[6]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/count_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#66 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/count_reg[7]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/count_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#67 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/last_ena_reg/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/last_ena_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#68 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/sending_reg/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/sending_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#69 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/temp_reg[0]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/temp_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#70 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/temp_reg[1]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/temp_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#71 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/temp_reg[2]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/temp_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#72 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/temp_reg[3]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/temp_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#73 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/temp_reg[4]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/temp_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#74 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/temp_reg[5]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/temp_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#75 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/temp_reg[6]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/temp_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#76 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartBoardToBoard/transmitter/temp_reg[7]/C is not reached by a timing clock
+The clock pin uartAnotherBoardToMyPutty/transmitter/temp_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#77 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/en_reg/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/en_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#78 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/last_rec_reg/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/last_rec_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#79 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/count_reg[0]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/count_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#80 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/count_reg[1]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#81 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/count_reg[2]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/count_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#82 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/count_reg[3]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/count_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#83 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/count_reg[4]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/count_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#84 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/count_reg[5]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/count_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#85 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/count_reg[6]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/count_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#86 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/count_reg[7]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/count_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#87 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/data_out_reg[0]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/data_out_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#88 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/data_out_reg[1]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/data_out_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#89 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/data_out_reg[2]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/data_out_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#90 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/data_out_reg[3]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/data_out_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#91 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/data_out_reg[4]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/data_out_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#92 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/data_out_reg[5]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/data_out_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#93 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/data_out_reg[6]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/data_out_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#94 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/data_out_reg[7]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/data_out_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#95 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/last_bit_reg/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/last_bit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#96 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/received_reg/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/received_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#97 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/receiver/receiving_reg/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/receiver/receiving_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#98 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/bit_out_reg/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/bit_out_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#99 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/count_reg[0]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/count_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#100 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/count_reg[1]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#101 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/count_reg[2]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/count_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#102 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/count_reg[3]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/count_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#103 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/count_reg[4]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/count_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#104 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/count_reg[5]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/count_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#105 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/count_reg[6]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/count_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#106 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/count_reg[7]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/count_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#107 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/last_ena_reg/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/last_ena_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#108 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/sending_reg/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/sending_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#109 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/temp_reg[0]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/temp_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#110 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/temp_reg[1]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/temp_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#111 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/temp_reg[2]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/temp_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#112 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/temp_reg[3]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/temp_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#113 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/temp_reg[4]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/temp_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#114 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/temp_reg[5]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/temp_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#115 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/temp_reg[6]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/temp_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#116 Critical Warning
 Non-clocked sequential cell  
-The clock pin uartMyKeyboardToMyBasys/transmitter/temp_reg[7]/C is not reached by a timing clock
+The clock pin uartPuttyToAnotherBoard/transmitter/temp_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#117 Critical Warning

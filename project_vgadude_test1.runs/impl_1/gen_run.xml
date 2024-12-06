@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1733482564">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1733487068">
   <File Type="ROUTE-PWR" Name="top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="top_power_summary_routed.pb"/>
@@ -184,6 +184,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/ps2_keyboard.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/PS2Receiver.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -268,6 +276,9 @@
     <File Path="$PSRCDIR/sources_1/new/ascii2.txt"/>
     <File Path="$PSRCDIR/sources_1/new/ascii5.txt"/>
     <File Path="$PSRCDIR/sources_1/new/ascii4.txt"/>
+    <File Path="$PSRCDIR/sources_1/new/ascii6.txt"/>
+    <File Path="$PSRCDIR/sources_1/new/ascii7.txt"/>
+    <File Path="$PSRCDIR/sources_1/new/ascii8.txt"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top"/>
