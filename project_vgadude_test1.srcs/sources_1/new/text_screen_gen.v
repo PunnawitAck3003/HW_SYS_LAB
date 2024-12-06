@@ -32,8 +32,8 @@ module text_screen_gen(
     wire [11:0] addr_r, addr_w;
     wire [7:0] din, dout;
     // 80-by-30 tile map
-    parameter MAX_X = 40;   // 640 pixels / 8 data bits = 80
-    parameter MAX_Y = 20;   // 480 pixels / 16 data rows = 30
+    parameter MAX_X = 70;   // 640 pixels / 8 data bits = 80
+    parameter MAX_Y = 21;   // 480 pixels / 16 data rows = 30
     // cursor
     reg [6:0] cur_x_reg;
     wire [6:0] cur_x_next;
@@ -112,7 +112,7 @@ module text_screen_gen(
     assign cur_y_next = (cur_y_reg == MAX_Y -1) ? 10 : ((enable && cur_x_reg == MAX_X - 1) || (enable && data_fk[7:4] == 4'b0000 && data_fk[3:0] == 4'b1101)) ? cur_y_reg + 1 : cur_y_reg;
     // object signals
     // green over black and reversed video for cursor
-    assign text_rgb = (ascii_bit) ? 12'h0F0 : 12'h000;
+    assign text_rgb = (ascii_bit) ? 12'hFF0 : 12'h000;
     assign text_rev_rgb = (ascii_bit) ? 12'h000 : 12'h0F0;
     // use delayed coordinates for comparison
     assign cursor_on = (pix_y2_reg[8:4] == cur_y_reg) &&

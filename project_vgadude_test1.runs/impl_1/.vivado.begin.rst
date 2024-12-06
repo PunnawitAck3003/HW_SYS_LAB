@@ -1,55 +1,25 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="11180" HostCore="8" HostMemory="07969406976">
+    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="8100" HostCore="8" HostMemory="07969406976">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="20820" HostCore="8" HostMemory="07969406976">
+    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="11848" HostCore="8" HostMemory="07969406976">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="7036" HostCore="8" HostMemory="07969406976">
+    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="1532" HostCore="8" HostMemory="07969406976">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="1088" HostCore="8" HostMemory="07969406976">
+    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="19192" HostCore="8" HostMemory="07969406976">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="5496" HostCore="8" HostMemory="07969406976">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="18268" HostCore="8" HostMemory="07969406976">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="6208" HostCore="8" HostMemory="07969406976">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="20872" HostCore="8" HostMemory="07969406976">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="8588" HostCore="8" HostMemory="07969406976">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="3900" HostCore="8" HostMemory="07969406976">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="18168" HostCore="8" HostMemory="07969406976">
+    <Process Command="vivado.bat" Owner="ASUS" Host="LAPTOP-VB" Pid="10576" HostCore="8" HostMemory="07969406976">
     </Process>
 </ProcessHandle>
