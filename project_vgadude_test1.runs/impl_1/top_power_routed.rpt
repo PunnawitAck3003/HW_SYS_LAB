@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Fri Dec  6 10:54:52 2024
+| Date             : Fri Dec  6 17:59:07 2024
 | Host             : LAPTOP-VB running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -60,7 +60,7 @@ Table of Contents
 |   F7/F8 Muxes  |    <0.001 |       58 |     32600 |            0.18 |
 |   Others       |     0.000 |       72 |       --- |             --- |
 |   BUFG         |     0.000 |        2 |        32 |            6.25 |
-| Signals        |     0.002 |     1222 |       --- |             --- |
+| Signals        |     0.002 |     1223 |       --- |             --- |
 | Block RAM      |     0.002 |        1 |        50 |            2.00 |
 | I/O            |     0.013 |       41 |       106 |           38.68 |
 | Static Power   |     0.072 |          |           |                 |

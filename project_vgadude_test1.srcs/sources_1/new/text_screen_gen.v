@@ -113,7 +113,7 @@ module text_screen_gen(
     // object signals
     // green over black and reversed video for cursor
     assign text_rgb = (ascii_bit) ? 12'hFF0 : 12'h000;
-    assign text_rev_rgb = (ascii_bit) ? 12'h000 : 12'h0F0;
+    //assign text_rev_rgb = (ascii_bit) ? 12'h000 : 12'h0F0;
     // use delayed coordinates for comparison
     assign cursor_on = (pix_y2_reg[8:4] == cur_y_reg) &&
                        (pix_x2_reg[9:3] == cur_x_reg);

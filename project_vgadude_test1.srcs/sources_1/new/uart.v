@@ -28,8 +28,8 @@ module uart(
     output RsTx,
     output [7:0] data_out,
     output received,
-    output en
-    //output reg [7:0] LEDs 
+    output en,
+    output sent
     );
     
     reg en, last_rec;
