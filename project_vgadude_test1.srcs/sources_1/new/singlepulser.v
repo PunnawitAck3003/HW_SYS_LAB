@@ -18,37 +18,17 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
-
 module singlepulser(
     input clk,
     input en,
-    output enable
+    output reg enable
     );
     
-    reg [1:0] stage = 0;
-    reg enable = 0;
+    reg en_d;
+
     always @(posedge clk) begin
-        if (stage == 0) begin
-            if(en) begin
-                enable = 1;
-                stage = 1; 
-            end
-        end
-        else if (stage == 1) begin
-            if(en) begin
-                stage = 2;
-            end
-            else begin
-                stage = 0;
-            end
-                enable = 0;
-        end
-        else begin
-            if(!en) begin
-                stage = 0;
-            end
-        end
-    end
+        en_d <= en;                   // Register the input `en`
+        enable <= en & ~en_d;          // Generate pulse on rising edge of `en`
+    end 
     
 endmodule

@@ -56,9 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -75,11 +72,15 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/PS2Receiver.v
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/ascii_rom.v
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/baudrate_gen.v
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/clockDiv.v
+  D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/debouncer.v
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/displayClock.v
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/hexTo7Segment.v
+  D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/key2ascii.v
+  D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/ps2_keyboard.v
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/quadSevenSeg.v
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/receiver.v
   D:/Ack_VB/Y3/HW/project_vgadude_test1/project_vgadude_test1.srcs/sources_1/new/simple_dual_one_clock.v

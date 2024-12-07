@@ -18,10 +18,8 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
-
 module uart(
-    input clk,
+    input baud,
     input RsRx,
     input [7:0] data_in,
     input mode,
@@ -33,12 +31,11 @@ module uart(
     );
     
     reg en, last_rec;
-    wire sent, received, baud;
+    wire sent, received;
     
     wire [7:0] data;
     assign data = (mode) ? data_in : data_out;
     
-    baudrate_gen baudrate_gen(clk, baud);
     uart_rx receiver(baud, RsRx, received, data_out);
     uart_tx transmitter(baud, data, en, sent, RsTx);
     
